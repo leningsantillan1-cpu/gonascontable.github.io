@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios contables y tributarios para pequeñas y medianas empresas. Especialistas en Régimen MYPE Tributario, con atención personalizada y enfoque técnico.">
+  <title>Goñas Contabilidad | Contabilidad y Tributación para MYPE</title>
+  <style>
+    :root{
+      --navy:#0b1f33;
+      --blue:#1769aa;
+      --cyan:#16a6c9;
+      --light:#f4f7fa;
+      --white:#fff;
+      --text:#263746;
+      --muted:#647587;
+      --border:#dfe7ee;
+      --green:#15966f;
+      --shadow:0 14px 40px rgba(11,31,51,.10);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;font-size:1.15rem;color:var(--navy);letter-spacing:-.3px}
+    .brand span{color:var(--blue)}
+    nav{display:flex;gap:28px;align-items:center}
+    nav a{font-size:.95rem;font-weight:600;color:#445568}
+    nav a:hover{color:var(--blue)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-weight:700;transition:.2s}
+    .nav-cta{background:var(--blue);color:white;padding:10px 17px}
+    .nav-cta:hover,.btn.primary:hover{transform:translateY(-2px);background:#10568d}
+    .hero{background:linear-gradient(135deg,#f4f9fd 0%,#eef7fb 55%,#fff 100%);padding:92px 0 78px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+    .eyebrow{display:inline-block;color:var(--blue);background:#e4f3fa;padding:7px 12px;border-radius:999px;font-size:.82rem;font-weight:800;margin-bottom:18px}
+    h1{font-size:clamp(2.35rem,5vw,4.35rem);line-height:1.05;letter-spacing:-2px;color:var(--navy);margin-bottom:22px}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:1.12rem;color:var(--muted);max-width:680px;margin-bottom:30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:13px 21px}
+    .btn.primary{background:var(--blue);color:white}
+    .btn.secondary{border:1px solid #bfd0dc;color:var(--navy);background:#fff}
+    .hero-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+    .hero-card h3{color:var(--navy);margin-bottom:16px;font-size:1.2rem}
+    .check{display:flex;gap:10px;margin:14px 0;color:#45596b}
+    .check b{color:var(--green)}
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:730px;margin:0 auto 45px}
+    .section-head h2{font-size:2.25rem;color:var(--navy);letter-spacing:-1px;margin-bottom:10px}
+    .section-head p{color:var(--muted)}
+    .services{background:#fff}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{padding:28px;border:1px solid var(--border);border-radius:var(--radius);background:#fff;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .card.featured{border:2px solid #4db4d1;box-shadow:var(--shadow);position:relative}
+    .badge{position:absolute;top:18px;right:18px;font-size:.72rem;font-weight:800;color:var(--blue);background:#e5f5fa;padding:5px 9px;border-radius:999px}
+    .icon{width:48px;height:48px;border-radius:13px;background:#e9f5fb;color:var(--blue);display:grid;place-items:center;font-weight:900;font-size:1.2rem;margin-bottom:18px}
+    .card h3{color:var(--navy);margin-bottom:9px}
+    .card p{color:var(--muted);font-size:.95rem}
+    .regimes{margin-top:25px;padding:24px;border-radius:var(--radius);background:var(--light);border:1px solid var(--border)}
+    .regimes strong{color:var(--navy)}
+    .pill{display:inline-block;padding:7px 11px;background:#fff;border:1px solid var(--border);border-radius:999px;margin:6px 4px 0 0;font-size:.83rem;font-weight:700;color:#4d6172}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
+    .profile-box{background:var(--navy);color:white;border-radius:24px;padding:35px;box-shadow:var(--shadow)}
+    .profile-box .initials{font-size:4rem;font-weight:900;line-height:1;color:#6ed3e6}
+    .profile-box h3{margin-top:16px;font-size:1.4rem}
+    .profile-box p{color:#c7d5df;margin-top:7px}
+    .about-copy h2{font-size:2.25rem;color:var(--navy);margin-bottom:18px}
+    .about-copy>p{color:var(--muted);margin-bottom:22px}
+    .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .fact{background:#fff;border:1px solid var(--border);border-radius:13px;padding:16px}
+    .fact strong{display:block;color:var(--navy)}
+    .fact span{font-size:.88rem;color:var(--muted)}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .step{border-top:3px solid var(--blue);padding:22px 10px}
+    .step-number{font-size:.8rem;font-weight:900;color:var(--blue)}
+    .step h3{color:var(--navy);margin:7px 0}
+    .step p{font-size:.9rem;color:var(--muted)}
+    .contact{background:var(--navy);color:white}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .contact h2{font-size:2.45rem;line-height:1.15;margin-bottom:14px}
+    .contact p{color:#c8d6df}
+    .contact-card{background:#fff;color:var(--text);border-radius:20px;padding:28px}
+    .contact-item{padding:15px 0;border-bottom:1px solid var(--border)}
+    .contact-item:last-child{border-bottom:0}
+    .contact-item small{display:block;color:var(--muted);margin-bottom:3px}
+    .contact-item a{font-weight:800;color:var(--blue)}
+    footer{background:#071522;color:#aebdca;padding:24px 0;font-size:.86rem}
+    footer .container{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:850px){
+      nav a:not(.nav-cta){display:none}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .hero{padding-top:60px}
+    }
+    @media(max-width:520px){
+      .process-grid,.facts{grid-template-columns:1fr}
+      .hero-card{padding:22px}
+      section{padding:62px 0}
+      footer .container{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#inicio">GOÑAS <span>CONTABILIDAD</span></a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proceso">Cómo trabajo</a>
+      <a href="#contacto" class="nav-cta">Contactarme</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">CONTABILIDAD • TRIBUTACIÓN • ASESORÍA</div>
+        <h1>Tu negocio crece.<br><span>Tu contabilidad también.</span></h1>
+        <p>
+          Asesoría contable y tributaria para pequeños y medianos negocios,
+          con especial atención al <strong>Régimen MYPE Tributario</strong>.
+          Te ayudo a mantener tus obligaciones en orden y a tomar decisiones
+          con información contable confiable.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="https://wa.me/51956076913?text=Hola%20Carlos,%20quisiera%20una%20asesor%C3%ADa%20contable." target="_blank">Solicitar asesoría</a>
+          <a class="btn secondary" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Especialidad principal</h3>
+        <div class="check"><b>✓</b><span>Régimen MYPE Tributario</span></div>
+        <div class="check"><b>✓</b><span>Declaraciones y obligaciones tributarias</span></div>
+        <div class="check"><b>✓</b><span>Contabilidad y Estados Financieros</span></div>
+        <div class="check"><b>✓</b><span>Control de inventarios y costos</span></div>
+        <div class="check"><b>✓</b><span>Orientación para la gestión de tu negocio</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-head">
+        <h2>Servicios contables pensados para tu negocio</h2>
+        <p>
+          Soluciones prácticas para emprendedores y empresas que necesitan
+          cumplir correctamente y, al mismo tiempo, entender sus números.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card featured">
+          <span class="badge">ESPECIALIDAD</span>
+          <div class="icon">M</div>
+          <h3>Régimen MYPE Tributario</h3>
+          <p>
+            Acompañamiento contable y tributario para pequeños y medianos
+            negocios: registro, revisión de obligaciones, declaraciones,
+            análisis y orientación para una gestión ordenada.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">C</div>
+          <h3>Contabilidad integral</h3>
+          <p>
+            Registro y análisis contable, conciliaciones, libros electrónicos,
+            cuentas de balance y resultados, y preparación de información
+            financiera.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">T</div>
+          <h3>Tributación empresarial</h3>
+          <p>
+            Apoyo en obligaciones tributarias, revisión de comprobantes,
+            impuestos mensuales y anuales y atención ordenada de requerimientos.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">I</div>
+          <h3>Inventarios y costos</h3>
+          <p>
+            Control de stock, análisis de inventarios y costeo de importaciones,
+            especialmente útil para negocios comerciales e importadores.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">E</div>
+          <h3>Estados financieros</h3>
+          <p>
+            Elaboración y análisis de información financiera para conocer la
+            situación del negocio y apoyar decisiones con mayor seguridad.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">A</div>
+          <h3>Activos fijos y NIIF</h3>
+          <p>
+            Experiencia en gestión de activos fijos, aplicación de NIIF y
+            herramientas empresariales como SAP Business One.
+          </p>
+        </article>
+      </div>
+
+      <div class="regimes">
+        <strong>También atendemos empresas de otros regímenes:</strong><br>
+        <span class="pill">Régimen Especial – RER</span>
+        <span class="pill">Régimen General</span>
+        <span class="pill">Régimen MYPE Tributario – RMT</span>
+        <span class="pill">Personas naturales con negocio</span>
+        <span class="pill">Empresas comerciales e importadoras</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre-mi">
+    <div class="container about-grid">
+      <div class="profile-box">
+        <div class="initials">CG</div>
+        <h3>Carlos Lenin Goñas Santillán</h3>
+        <p>Contador Público Colegiado</p>
+        <p style="margin-top:18px">
+          Formación en contabilidad, finanzas y NIIF, con experiencia en
+          empresas comerciales, importadoras, industriales y servicios.
+        </p>
+      </div>
+
+      <div class="about-copy">
+        <h2>Experiencia técnica, explicada de forma sencilla</h2>
+        <p>
+          Mi objetivo es que la contabilidad no sea una carga para el empresario,
+          sino una herramienta para ordenar, cumplir y conocer mejor su negocio.
+          Combino experiencia práctica con formación especializada para brindar
+          una atención responsable y cercana.
+        </p>
+        <div class="facts">
+          <div class="fact"><strong>+12 años</strong><span>de experiencia profesional</span></div>
+          <div class="fact"><strong>+7 años</strong><span>en empresas comerciales, importadoras e industriales</span></div>
+          <div class="fact"><strong>Maestría</strong><span>Ciencias Empresariales con mención en NIIF – USIL</span></div>
+          <div class="fact"><strong>Especialidad</strong><span>Contabilidad, tributación, inventarios, costos y estados financieros</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso">
+    <div class="container">
+      <div class="section-head">
+        <h2>Una forma de trabajo clara</h2>
+        <p>Sin tecnicismos innecesarios: primero entendemos tu negocio y luego ordenamos la contabilidad.</p>
+      </div>
+      <div class="process-grid">
+        <div class="step"><div class="step-number">01</div><h3>Conocemos tu negocio</h3><p>Actividad, régimen, volumen de operaciones y necesidades reales.</p></div>
+        <div class="step"><div class="step-number">02</div><h3>Revisamos</h3><p>Identificamos obligaciones, documentación y puntos que requieren atención.</p></div>
+        <div class="step"><div class="step-number">03</div><h3>Ordenamos</h3><p>Trabajamos la información contable y tributaria de manera sistemática.</p></div>
+        <div class="step"><div class="step-number">04</div><h3>Acompañamos</h3><p>Te explicamos los resultados y las acciones que conviene tomar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="container contact-grid">
+      <div>
+        <div class="eyebrow" style="background:#153d58;color:#72d4e6">CONTACTO</div>
+        <h2>Hablemos de la contabilidad de tu negocio.</h2>
+        <p>
+          Cuéntame brevemente qué actividad realizas y en qué régimen tributario
+          estás. Podemos revisar tus necesidades y definir el servicio adecuado.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-item">
+          <small>WhatsApp / Celular</small>
+          <a href="https://wa.me/51956076913" target="_blank">+51 956 076 913</a>
+        </div>
+        <div class="contact-item">
+          <small>Correo electrónico</small>
+          <a href="mailto:leningsantillan1@gmail.com">leningsantillan1@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <small>Ubicación</small>
+          <strong>Lima – Perú</strong>
+        </div>
+        <a class="btn primary" style="width:100%;margin-top:14px" href="https://wa.me/51956076913?text=Hola%20Carlos,%20quisiera%20consultar%20por%20sus%20servicios%20contables." target="_blank">
+          Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Goñas Contabilidad. Todos los derechos reservados.</span>
+    <span>Contabilidad • Tributación • Asesoría</span>
+  </div>
+</footer>
+
+</body>
+</html>
